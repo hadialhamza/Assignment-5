@@ -118,7 +118,7 @@
             <div class="flex flex-col items-start space-y-4">
               <div class="flex items-center px-3 py-2 rounded-lg bg-base-300">
                 <img src="./assets/coin.png" alt="" />
-                <p><span class="mx-2">0</span>BDT</p>
+                <p><span id="donation2" class="mx-2">0</span>BDT</p>
               </div>
               <h2 class="text-base font-bold">
                 Donate for Flood Relief in Feni,Bangladesh
@@ -137,10 +137,11 @@
                 class="w-full text-base text-[#737373] p-5 rounded-xl border border-[#e2dfdf]"
                 type="text"
                 name=""
-                id=""
+                id="donate-amount2"
                 placeholder="Write Donation Amount"
               />
               <button
+                id="donate-submit2"
                 class="bg-[#B4F461] text-xl font-semibold text-center w-full rounded-lg py-5 mt-2 btn h-auto"
               >
                 Donate Now
@@ -200,6 +201,25 @@
         id="history-section"
         class="mt-10 container mx-auto hidden"
       ></section>
+      <!-- History section end -->
+
+      <!-- Modal start -->
+      <!-- Open the modal using ID.showModal() method -->
+      <!-- <button class="btn" onclick="my_modal.showModal()">open modal</button> -->
+      <dialog id="my_modal" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box flex flex-col items-center">
+          <h3 class="text-4xl font-bold text-center mb-4">Congrats!</h3>
+          <img src="./assets/coin.png" alt="" />
+          <p class="py-4">You have donated for humankind</p>
+          <h3 class="text-2xl font-extrabold">Successfully!</h3>
+          <div class="modal-action">
+            <form method="dialog">
+              <!-- if there is a button in form, it will close the modal -->
+              <button class="btn">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
     </main>
     <script src="script.js"></script>
   </body>
