@@ -44,7 +44,7 @@
         </div>
         <div class="flex items-center">
           <img src="./assets/coin.png" alt="" />
-          <p><span class="mx-2">50000</span>BDT</p>
+          <p><span id="main-balance" class="mx-2">50000</span>BDT</p>
         </div>
       </div>
     </nav>
@@ -76,7 +76,7 @@
             <div class="flex flex-col items-start space-y-4">
               <div class="flex items-center px-3 py-2 rounded-lg bg-base-300">
                 <img src="./assets/coin.png" alt="" />
-                <p><span class="mx-2">0</span>BDT</p>
+                <p><span id="donation1" class="mx-2">0</span>BDT</p>
               </div>
               <h2 class="text-base font-bold">
                 Donate for Flood at Noakhali, Bangladesh
@@ -91,12 +91,13 @@
               </p>
               <input
                 class="w-full text-base text-[#737373] p-5 rounded-xl border border-[#e2dfdf]"
-                type="text"
+                type="number"
                 name=""
-                id=""
+                id="donate-amount1"
                 placeholder="Write Donation Amount"
               />
               <button
+                id="donate-submit1"
                 class="bg-[#B4F461] text-xl font-semibold text-center w-full rounded-lg py-5 mt-2 btn h-auto"
               >
                 Donate Now
@@ -193,5 +194,6 @@
         </div>
       </section>
     </main>
+    <script src="/script.js"></script>
   </body>
 </html>
