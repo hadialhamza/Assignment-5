@@ -97,6 +97,47 @@ submitButton2.addEventListener("click", function () {
   document.getElementById("my_modal").showModal();
 });
 
+// Button event handler 3
+const submitButton3 = document.getElementById("donate-submit3");
+submitButton3.addEventListener("click", function () {
+  const donateAmount = getInputValue("donate-amount3");
+  const donation3 = getInnerTextValue("donation3");
+  const mainBalance = getInnerTextValue("main-balance");
+
+  // Validation fot NaN
+  if (isNaN(donateAmount)) {
+    alert("Please enter a valid number for donate.");
+    return;
+  }
+
+  //   Validation for Negative numbers
+  if (donateAmount < 0 || donateAmount > mainBalance) {
+    alert("Please enter a positive number for donate.");
+    return;
+  }
+
+  //   Calculation
+  const totalDonation = donation3 + donateAmount;
+  document.getElementById("donation3").innerText = totalDonation;
+
+  const remainingBalance = mainBalance - donateAmount;
+  document.getElementById("main-balance").innerText = remainingBalance;
+
+  //   Transaction history
+  const div = document.createElement("div");
+  div.classList.add("border", "border-[#c9c9c9]", "p-5", "rounded-2xl", "mb-3");
+  div.innerHTML = `<h2 class="text-xl font-bold">
+            ${donateAmount} Taka is Aid for Injured in the Quota Movement
+          </h2>
+          <p class="text-base text-[#737373] font-light">
+            ${date}
+          </p>`;
+  document.getElementById("history-section").appendChild(div);
+
+  //   Modal section
+  document.getElementById("my_modal").showModal();
+});
+
 // History button event handler
 
 const historyButton = document.getElementById("history-btn");
