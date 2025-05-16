@@ -55,14 +55,14 @@
       <!-- Button section start -->
       <section class="">
         <div class="flex justify-center space-x-3">
-          <button class="btn">Donation</button>
-          <button class="btn">History</button>
+          <button id="donate-btn" class="btn bg-[#B4F461]">Donation</button>
+          <button id="history-btn" class="btn">History</button>
         </div>
       </section>
       <!-- Button Section end -->
 
       <!-- Main section start -->
-      <section>
+      <section id="main-section" class="">
         <!-- Card 1 -->
         <div
           class="grid grid-cols-2 gap-5 mt-8 border p-4 rounded-2xl border-[#e2dfdf]"
@@ -193,6 +193,13 @@
           </div>
         </div>
       </section>
+      <!-- Main Section end -->
+
+      <!-- History section start -->
+      <section
+        id="history-section"
+        class="mt-10 container mx-auto hidden"
+      ></section>
     </main>
     <script src="script.js"></script>
   </body>
